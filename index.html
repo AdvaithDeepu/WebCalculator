@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Web Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style = "background-color: aquamarine;">
+    <div class = "container">
+        <div style = "border-radius: 10px 10px 10px 10px; border-color:orange; background-color: orange; padding: 10px;"><a href="https://infernovaad.github.io/My_Web/" style= "color:black;font-size:25px;text-decoration: none;" > 
+        Mathemagic!
+        </a></div><br>
+        <details style = "background-color:yellow;">
+        <summary>Square Calculator</summary>
+        <p>Enter the number of which you want to know the square:-</p>
+        <input type="number" id="numBox" value=0 style = "background-color:tomato"></input>
+        <button onclick = "buttonPress()">Calculate</button>
+        <p id = "result"></p>
+        <script>
+            let square;
+            function buttonPress(){
+                var x = document.getElementById("numBox").value;
+                square = x*x;
+                document.getElementById("result").innerHTML="The answer is: "+ square;
+            }
+        </script>
+        </details>
+        <hr>
+        <details style = "background-color:yellow;">
+            <summary>Addition</summary>
+            <p>Enter the two Numbers</p>
+            <input type= "number" id = "addNum1" value=0 style = "background-color:tomato"></input>
+            <br>
+            <input type= "number" id = "addNum2" value=0 style = "background-color:tomato"></input>
+            <button onclick = "addition()">Calculate</button><br><br>
+            <b id = "addResult" style = "color:black;"></b>
+            <script>
+                let sum, num1, num2;
+                function addition(){
+                num1 = document.getElementById("addNum1").value;
+                num2 = document.getElementById("addNum2").value;
+                sum = parseFloat(num1)+parseFloat(num2)
+                document.getElementById("addResult").innerHTML = num1+" + "+num2+" = "+sum;
+                }
+            </script>
+        </details>
+        <hr>
+        <details style = "background-color:yellow;">
+            <summary>Subtraction</summary>
+            <p>Enter the two Numbers</p>
+            <input type= "number" id = "subNum1" value=0 style = "background-color:tomato"></input>
+            <br>
+            <input type= "number" id = "subNum2" value=0 style = "background-color:tomato"></input>
+            <button onclick = "subtraction()">Calculate</button><br><br>
+            <b id = "subResult" style = "color:black;"></b>
+            <script>
+                let difference, sub1, sub2;
+                function subtraction(){
+                sub1 = document.getElementById("subNum1").value;
+                sub2 = document.getElementById("subNum2").value;
+                difference = sub1-sub2
+                document.getElementById("subResult").innerHTML = sub1+" - "+sub2+" = "+difference;
+                }
+            </script>
+        </details>
+        <hr>
+        <details style = "background-color:yellow;">
+            <summary>Multiplication</summary>
+            <p>Enter the two Numbers</p>
+            <input type= "number" id = "multNum1" value=0 style = "background-color:tomato"></input>
+            <br>
+            <input type= "number" id = "multNum2" value=0 style = "background-color:tomato"></input>
+            <button onclick = "multiplication()">Calculate</button><br><br>
+            <b id = "multResult" style = "color:black;"></b>
+            <script>
+                let prod, mult1, mult2;
+                function multiplication(){
+                mult1 = document.getElementById("multNum1").value;
+                mult2 = document.getElementById("multNum2").value;
+                prod = mult1*mult2
+                document.getElementById("multResult").innerHTML = mult1+" X "+mult2+" = "+prod;
+                }
+            </script>
+        </details>
+        <hr>
+        <details style = "background-color:yellow;">
+            <summary>Division</summary>
+            <p>Enter the two Numbers</p>
+            <input type= "number" id = "divNum1" value=0 style = "background-color:tomato"></input>
+            <br>
+            <input type= "number" id = "divNum2" value=0 style = "background-color:tomato"></input>
+            <button onclick = "Division()">Calculate</button><br><br>
+            <b id = "divResult" style = "color:black;"></b>
+            <script>
+                let quotient, div1, div2;
+                function Division(){
+                div1 = document.getElementById("divNum1").value;
+                div2 = document.getElementById("divNum2").value;
+                quotient = div1/div2
+                document.getElementById("divResult").innerHTML = div1+" ÷ "+div2+" = "+quotient;
+                }
+            </script>
+        </details>
+        <hr>
+        <a href ='https://infernovaad.github.io/My_Web/'>
+        <button>Refresh Page</button>
+     </a>
+    </div>
+</body>
+</html>
