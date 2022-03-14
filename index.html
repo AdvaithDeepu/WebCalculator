@@ -5,15 +5,7 @@
     <meta name="google-site-verification" content="hPIYOb02FYe_KMoBEYCbJFH-rFjBKuDhqPCGB0qV5eU" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        
-      body {
-       background-image: url('background.png');
-       background-repeat: no-repeat;
-       background-attachment: fixed;  
-       background-size: cover;
-        }
-        
+    <style>                
       hr {
            border-top: 1px solid black; 
         }
@@ -35,7 +27,6 @@
     </style>
 </head>
 <body>
-    <div>
         <div style = "border-radius: 10px 10px 10px 10px; border-color:orange; background-color: orange; padding: 10px;"><a href="https://advaithdeepu.github.io/WebCalculator/" style= "color:black;font-size:25px;text-decoration: none;" > 
         Web Calculator
         </a></div><br>
@@ -70,6 +61,7 @@
             <button onclick = "addition()">Calculate</button><br><br>
             <b id = "addResult" style = "color:black;"></b>
             <script>
+                document.body.style.backgroundColor = "#00FFEE"
                 let sum, num1, num2;
                 function addition(){
                 num1 = document.getElementById("addNum1").value;
@@ -139,6 +131,11 @@
             <button onclick = "Division()">Calculate</button><br><br>
             <b id = "divResult" style = "color:black;"></b>
             <script>
+                let color;
+                function ChangeColor(){
+                  let color = document.getElementById("colorPicker").value;
+                  document.body.style.backgroundColor = color;
+                }
                 let quotient, div1, div2;
                 function Division(){
                 div1 = document.getElementById("divNum1").value;
@@ -150,10 +147,14 @@
           </details>
          </li>
         </ul>
-        <hr>
+        <br>
         <a href ='https://advaithdeepu.github.io/WebCalculator/'>
         <button>Refresh Page</button>
-     </a>
-    </div>
+     </a><hr>
+     <footer>
+      <label for="colorPicker">Select a color</label>
+      <input type="color" id="colorPicker" name="favcolor" value="#00FFEE">
+      <button onclick="ChangeColor()">Change Mood</button>    
+    </footer>
 </body> 
 </html>
