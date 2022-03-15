@@ -38,14 +38,6 @@
           <input type="number" id="numBox" placeholder="Enter the Number" style = "background-color:tomato"></input>
           <button onclick = "buttonPress()">Calculate</button>
           <p id = "result"></p>
-          <script>
-            let square;
-            function buttonPress(){
-                var x = document.getElementById("numBox").value;
-                square = x*x;
-                document.getElementById("result").innerHTML="The answer is: "+ square;
-              }
-          </script>
           </details>
          </li>
         </ul>
@@ -59,17 +51,7 @@
             <br>
             <input type= "number" id = "addNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
             <button onclick = "addition()">Calculate</button><br><br>
-            <b id = "addResult" style = "color:black;"></b>
-            <script>
-                document.body.style.backgroundColor = "#00FFEE"
-                let sum, num1, num2;
-                function addition(){
-                num1 = document.getElementById("addNum1").value;
-                num2 = document.getElementById("addNum2").value;
-                sum = parseFloat(num1)+parseFloat(num2)
-                document.getElementById("addResult").innerHTML = num1+" + "+num2+" = "+sum;
-                }
-            </script>
+            <b id = "addResult" style = "color:black;"></b>            
           </details>
          </li>
         </ul>  
@@ -83,16 +65,7 @@
             <br>
             <input type= "number" id = "subNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
             <button onclick = "subtraction()">Calculate</button><br><br>
-            <b id = "subResult" style = "color:black;"></b>
-            <script>
-                let difference, sub1, sub2;
-                function subtraction(){
-                sub1 = document.getElementById("subNum1").value;
-                sub2 = document.getElementById("subNum2").value;
-                difference = sub1-sub2 
-                document.getElementById("subResult").innerHTML = sub1+" - "+sub2+" = "+difference;
-                }
-            </script>
+            <b id = "subResult" style = "color:black;"></b>            
           </details>
          </li>
         </ul>
@@ -106,16 +79,7 @@
             <br>
             <input type= "number" id = "multNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
             <button onclick = "multiplication()">Calculate</button><br><br>
-            <b id = "multResult" style = "color:black;"></b>
-            <script>
-                let prod, mult1, mult2;
-                function multiplication(){
-                mult1 = document.getElementById("multNum1").value;
-                mult2 = document.getElementById("multNum2").value;
-                prod = mult1*mult2
-                document.getElementById("multResult").innerHTML = mult1+" X "+mult2+" = "+prod;
-                }
-            </script>
+            <b id = "multResult" style = "color:black;"></b>            
           </details>
          </li>
         </ul>
@@ -130,7 +94,38 @@
             <input type= "number" id = "divNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
             <button onclick = "Division()">Calculate</button><br><br>
             <b id = "divResult" style = "color:black;"></b>
+          </details>
+         </li>
+        </ul>
             <script>
+                document.body.style.backgroundColor = "#00FFEE"
+                let sum, num1, num2;
+                function addition(){
+                 num1 = document.getElementById("addNum1").value;
+                 num2 = document.getElementById("addNum2").value;
+                 sum = parseFloat(num1)+parseFloat(num2)
+                 document.getElementById("addResult").innerHTML = num1+" + "+num2+" = "+sum;
+                }
+                let difference, sub1, sub2;
+                function subtraction(){
+                 sub1 = document.getElementById("subNum1").value;
+                 sub2 = document.getElementById("subNum2").value;
+                 difference = sub1-sub2 
+                 document.getElementById("subResult").innerHTML = sub1+" - "+sub2+" = "+difference;
+                }
+                let prod, mult1, mult2;
+                function multiplication(){
+                 mult1 = document.getElementById("multNum1").value;
+                 mult2 = document.getElementById("multNum2").value;
+                 prod = mult1*mult2
+                 document.getElementById("multResult").innerHTML = mult1+" X "+mult2+" = "+prod;
+                }
+                let square;
+                function buttonPress(){
+                 var x = document.getElementById("numBox").value;
+                 square = x*x;
+                 document.getElementById("result").innerHTML="The answer is: "+ square;
+                }
                 let color;
                 function ChangeColor(){
                   let color = document.getElementById("colorPicker").value;
@@ -138,15 +133,12 @@
                 }
                 let quotient, div1, div2;
                 function Division(){
-                div1 = document.getElementById("divNum1").value;
-                div2 = document.getElementById("divNum2").value;
-                quotient = div1/div2
-                document.getElementById("divResult").innerHTML = div1+" ÷ "+div2+" = "+quotient;
+                 div1 = document.getElementById("divNum1").value;
+                 div2 = document.getElementById("divNum2").value;
+                 quotient = div1/div2
+                 document.getElementById("divResult").innerHTML = div1+" ÷ "+div2+" = "+quotient;
                 }
             </script>
-          </details>
-         </li>
-        </ul>
         <br>
         <a href ='https://advaithdeepu.github.io/WebCalculator/'>
         <button>Refresh Page</button>
