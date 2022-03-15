@@ -5,9 +5,10 @@
     <meta name="google-site-verification" content="hPIYOb02FYe_KMoBEYCbJFH-rFjBKuDhqPCGB0qV5eU" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Tag styles-->
     <style>                
       hr {
-           border-top: 1px solid black; 
+          border-top: 1px solid black; 
         }
       ul.add {
           list-style-image: url("images/pls.png");
@@ -30,9 +31,9 @@
     </style>
 </head>
 <body>
-        <div style = "border-radius: 10px 10px 10px 10px; border-color:orange; background-color: orange; padding: 10px;"><a href="https://advaithdeepu.github.io/WebCalculator/" style= "color:black;font-size:25px;text-decoration: none;" > 
-        Web Calculator
-        </a></div><br>
+        <header>
+         <a href="https://advaithdeepu.github.io/WebCalculator/"><img src ="images/webcalc logo.png"></a>
+        </header>
         <ul class = "add">
          <li>
           <details>
@@ -115,16 +116,52 @@
              </details>
            </li>
          </ul>
+         <hr>
+         <!--
+         <ul class = interest>
+           <li>
+             <details>
+               <summary>
+                 Interest
+               </summary>
+               <p>Enter the Number</p>
+               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
+               <button onclick="SquareRoot()">Find Square root</button>
+               <button onclick="CubeRoot()">Find Cube root</button>
+               <p id = "rootResult"></p>
+             </details>
+           </li>
+         </ul>         
+         <hr>-->
+         <!--
+         <ul class = table>
+           <li>
+             <details>
+               <summary>
+                 Multiplication Table
+               </summary>
+               <p>Enter the Number</p>
+               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
+               <button onclick="SquareRoot()">Find Square root</button>
+               <button onclick="CubeRoot()">Find Cube root</button>
+               <p id = "rootResult"></p>
+             </details>
+           </li>
+         </ul>         
+         <hr>-->
          <br>
+         <!--Refresh Button-->
          <a href ='https://advaithdeepu.github.io/WebCalculator/'>
          <button>Refresh Page</button>
          </a>
-         <hr>
+         <br><br>
+         <!--Mood Lighting-->
          <footer>
           <label for="colorPicker">Select a color</label>
           <input type="color" id="colorPicker" name="favcolor" value="#00FFEE">
           <button onclick="ChangeColor()">Change Mood</button>    
          </footer>
+         <!--Javascript Functions-->
          <script>
                 document.body.style.backgroundColor = "#00FFEE"
                 let sum,num1, num2;
