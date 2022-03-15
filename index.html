@@ -24,6 +24,9 @@
       ul.sqr {
           list-style-image: url("images/sqr.png");
         }
+      ul.root {
+          list-style-image: url("images/root.png");
+        }
     </style>
 </head>
 <body>
@@ -97,6 +100,21 @@
            </details>
           </li>
          </ul>
+         <hr>
+         <ul class = root>
+           <li>
+             <details>
+               <summary>
+                 Square and Cube root
+               </summary>
+               <p>Enter the Number</p>
+               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
+               <button onclick="SquareRoot()">Find Square root</button>
+               <button onclick="CubeRoot()">Find Cube root</button>
+               <p id = "rootResult"></p>
+             </details>
+           </li>
+         </ul>
          <br>
          <a href ='https://advaithdeepu.github.io/WebCalculator/'>
          <button>Refresh Page</button>
@@ -139,6 +157,14 @@
                  num1 = document.getElementById("divNum1").value;
                  num2 = document.getElementById("divNum2").value;
                  document.getElementById("divResult").innerHTML = num1+" ÷ "+num2+" = "+num1/num2;
+                }
+                function SquareRoot(){
+                 num1 = document.getElementById("rootNum").value;
+                 document.getElementById("rootResult").innerHTML = "Square root of "+num1+" is "+Math.sqrt(num1);
+                }
+                function CubeRoot(){
+                  num1 = document.getElementById("rootNum").value;
+                  document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1)
                 }
         </script>        
 </body> 
