@@ -22,12 +22,15 @@
       ul.div {
           list-style-image: url("images/div.png");
         }
-      ul.sqr {
+      ul.exp {
           list-style-image: url("images/sqr.png");
         }
       ul.root {
           list-style-image: url("images/root.png");
         }
+      ul.hcfLcm {
+          list-style-image: url("images/hcflcm.png");
+      }
     </style>
 </head>
 <body>
@@ -92,14 +95,32 @@
          </li>
         </ul>
         <hr>
-        <ul class = "sqr">
+        <ul class = "hcfLcm">
+          <li>
+            <details>
+              <summary>
+                HCF and LCM
+              </summary>
+              <p>Enter the Numbers</p>
+              <input type="number" id="HCF1" placeholder="Enter the larger Number" style="background-color:tomato;"></input>
+              <input type="number" id="HCF2" placeholder="Enter  smaller Number" style="background-color:tomato;"></input><br>
+              <button onclick="HCF()">Find HCF</button>
+              <button onclick="LCM()">Find LCM</button>
+              <p id = "Hresult"></p>
+            </details>
+          </li>
+        </ul>         
+        <hr>
+        <ul class = "exp">
           <li>
            <details>
-           <summary>Square Calculator</summary>
-           <p>Enter the number of which you want to know the square:-</p>
-           <input type="number" id="square" placeholder="Enter the Number" style = "background-color:tomato"></input>
-           <button onclick = "Square()">Calculate</button>
-           <p id = "squareresult"></p>
+           <summary>Exponentiation</summary>
+           <p>Enter the number:- </p>
+           <input type="number" id="Exp1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+           <p>Enter the exponent:- </p>
+           <input type="number" id="Exp2" placeholder="Enter the Exponent" style = "background-color:tomato"></input>
+           <button onclick = "Exponent()">Calculate</button>
+           <p id = "ExpResult"></p>
            </details>
           </li>
          </ul>
@@ -119,38 +140,6 @@
            </li>
          </ul>
          <hr>
-         <!--
-         <ul class = interest>
-           <li>
-             <details>
-               <summary>
-                 Interest
-               </summary>
-               <p>Enter the Number</p>
-               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
-               <button onclick="SquareRoot()">Find Square root</button>
-               <button onclick="CubeRoot()">Find Cube root</button>
-               <p id = "rootResult"></p>
-             </details>
-           </li>
-         </ul>         
-         <hr>-->
-         <!--
-         <ul class = table>
-           <li>
-             <details>
-               <summary>
-                 Multiplication Table
-               </summary>
-               <p>Enter the Number</p>
-               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
-               <button onclick="SquareRoot()">Find Square root</button>
-               <button onclick="CubeRoot()">Find Cube root</button>
-               <p id = "rootResult"></p>
-             </details>
-           </li>
-         </ul>         
-         <hr>-->
          <br>
          <!--Refresh Button-->
          <a href ='https://advaithdeepu.github.io/WebCalculator/'>

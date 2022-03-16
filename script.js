@@ -1,5 +1,5 @@
 document.body.style.backgroundColor = "#00FFEE" //initialize background color
-let num1, num2, color;
+let num1, num2, color,x,y;
 function addition(){
     num1 = parseInt(document.getElementById("addNum1").value);
     num2 = parseInt(document.getElementById("addNum2").value);
@@ -15,9 +15,10 @@ function multiplication(){
     num2 = document.getElementById("multNum2").value;
     document.getElementById("multResult").innerHTML = num1+" X "+num2+" = "+num1*num2;
 }
-function Square(){
-    num1 = document.getElementById("square").value;
-    document.getElementById("squareresult").innerHTML="The answer is: "+ num1*num1;
+function Exponent(){
+    num1 = document.getElementById("Exp1").value;
+    num2 = document.getElementById("Exp2").value;
+    document.getElementById("ExpResult").innerHTML=num1+" raised to "+ num2+" is: "+num1**num2;
 }
 function Division(){
     num1 = document.getElementById("divNum1").value;
@@ -31,6 +32,32 @@ function SquareRoot(){
 function CubeRoot(){
     num1 = document.getElementById("rootNum").value;
     document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1)
+}
+function Lemma(x, y){
+    num1 = document.getElementById("HCF1").value;
+    num2 = document.getElementById("HCF2").value;
+    x = num1;
+    y = num2;
+    while (1==1){        
+        rem = x%y;
+        if (rem!=0){
+            x = y;
+            y = rem;
+        }else if (rem ==0){ 
+            break;
+        }
+    }
+    return y;
+}
+function HCF(){
+    num1 = document.getElementById("HCF1").value;
+    num2 = document.getElementById("HCF2").value;
+    document.getElementById("Hresult").innerHTML= "The HCF of "+num1+" and "+num2+" is: "+Lemma(num1, num2);;
+}
+function LCM(){
+    num1 = document.getElementById("HCF1").value;
+    num2 = document.getElementById("HCF2").value;
+    document.getElementById("Hresult").innerHTML= "The LCM of "+num1+" and "+num2+" is: "+((num1*num2)/Lemma(num1, num2));;
 }
 function ChangeColor(){ //Mood lighting code
     let color = document.getElementById("colorPicker").value;
