@@ -75,3 +75,10 @@ div.heading {
   background-color: yellow;
   border-radius: 15px 15px 15px 15px;
 }
+
+div.footer{
+  display: flex;   
+  justify-content: center;
+  background-color: yellow;
+  align-items: center;
+}
