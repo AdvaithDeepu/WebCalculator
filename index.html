@@ -2,36 +2,12 @@
 <head>
     <title>Web Calculator</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="stylesheet.css" rel="stylesheet">
     <meta name="google-site-verification" content="hPIYOb02FYe_KMoBEYCbJFH-rFjBKuDhqPCGB0qV5eU" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Tag styles-->
-    <style>                
-      hr {
-          border-top: 1px solid black; 
-        }
-      ul.add {
-          list-style-image: url("images/pls.png");
-        }
-      ul.sub {
-          list-style-image: url("images/sub.png");
-        }
-      ul.mul {
-          list-style-image: url("images/mul.png");
-        }
-      ul.div {
-          list-style-image: url("images/div.png");
-        }
-      ul.exp {
-          list-style-image: url("images/sqr.png");
-        }
-      ul.root {
-          list-style-image: url("images/root.png");
-        }
-      ul.hcfLcm {
-          list-style-image: url("images/hcflcm.png");
-      }
-    </style>
+    <meta name="description" content="Calculate anything!">
+    <meta name="keywords" content="Addition, Subtraction, Multiplication, Division, HCF, LCM, Exponent, Square root, Cube root, Multipication table, square table, Area, Perimeter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
 </head>
 <body>
         <header>
@@ -44,10 +20,10 @@
           <details>
             <summary>Addition</summary>
             <p>Enter the two Numbers</p>
-            <input type= "number" id = "addNum1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+            <input class = "num" type= "number" id = "addNum1" placeholder="Enter the Number"></input>
             <br>
-            <input type= "number" id = "addNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
-            <button onclick = "addition()">Calculate</button><br><br>
+            <input class = "num" type= "number" id = "addNum2" placeholder="Enter the Number"></input>
+            <br><button class = "button" onclick = "addition()">Calculate</button><br><br>
             <b id = "addResult" style = "color:black;"></b>            
           </details>
          </li>
@@ -58,10 +34,10 @@
           <details>            
             <summary>Subtraction</summary>
             <p>Enter the two Numbers</p>
-            <input type= "number" id = "subNum1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+            <input class = "num" type= "number" id = "subNum1" placeholder="Enter the Number"></input>
             <br>
-            <input type= "number" id = "subNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
-            <button onclick = "subtraction()">Calculate</button><br><br>
+            <input class = "num" type= "number" id = "subNum2" placeholder="Enter the Number"></input>
+            <br><button onclick = "subtraction()">Calculate</button><br><br>
             <b id = "subResult" style = "color:black;"></b>            
           </details>
          </li>
@@ -72,10 +48,10 @@
           <details>
             <summary>Multiplication</summary>
             <p>Enter the two Numbers</p>
-            <input type= "number" id = "multNum1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+            <input type= "number" id = "multNum1" placeholder="Enter the Number"></input>
             <br>
-            <input type= "number" id = "multNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
-            <button onclick = "multiplication()">Calculate</button><br><br>
+            <input type= "number" id = "multNum2" placeholder="Enter the Number"></input>
+            <br><button onclick = "multiplication()">Calculate</button><br><br>
             <b id = "multResult" style = "color:black;"></b>            
           </details>
          </li>
@@ -86,10 +62,10 @@
           <details>
             <summary>Division</summary>
             <p>Enter the two Numbers</p>
-            <input type= "number" id = "divNum1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+            <input class = "num" type= "number" id = "divNum1" placeholder="Enter the Number"></input>
             <br>
-            <input type= "number" id = "divNum2" placeholder="Enter the Number" style = "background-color:tomato"></input>
-            <button onclick = "Division()">Calculate</button><br><br>
+            <input class = "num" type= "number" id = "divNum2" placeholder="Enter the Number"></input>
+            <br><button onclick = "Division()">Calculate</button><br><br>
             <b id = "divResult" style = "color:black;"></b>
           </details>
          </li>
@@ -102,8 +78,8 @@
                 HCF and LCM
               </summary>
               <p>Enter the Numbers</p>
-              <input type="number" id="HCF1" placeholder="Enter the larger Number" style="background-color:tomato;"></input>
-              <input type="number" id="HCF2" placeholder="Enter  smaller Number" style="background-color:tomato;"></input><br>
+              <input class = "num" type="number" id="HCF1" placeholder="Enter the larger Number"></input><br>
+              <input class = "num" type="number" id="HCF2" placeholder="Enter  smaller Number"></input><br><br>
               <button onclick="HCF()">Find HCF</button>
               <button onclick="LCM()">Find LCM</button>
               <p id = "Hresult"></p>
@@ -116,10 +92,10 @@
            <details>
            <summary>Exponentiation</summary>
            <p>Enter the number:- </p>
-           <input type="number" id="Exp1" placeholder="Enter the Number" style = "background-color:tomato"></input>
+           <input class = "num" type="number" id="Exp1" placeholder="Enter the Number"></input>
            <p>Enter the exponent:- </p>
-           <input type="number" id="Exp2" placeholder="Enter the Exponent" style = "background-color:tomato"></input>
-           <button onclick = "Exponent()">Calculate</button>
+           <input class = "num" type="number" id="Exp2" placeholder="Enter the Exponent"></input>
+           <br><button onclick = "Exponent()">Calculate</button>
            <p id = "ExpResult"></p>
            </details>
           </li>
@@ -132,19 +108,56 @@
                  Square and Cube root
                </summary>
                <p>Enter the Number</p>
-               <input type="number" id="rootNum" placeholder="Enter the Number" style="background-color:tomato;"></input>
-               <button onclick="SquareRoot()">Find Square root</button>
+               <input class = "num" type="number" id="rootNum" placeholder="Enter the Number"></input>
+               <br><button onclick="SquareRoot()">Find Square root</button>
                <button onclick="CubeRoot()">Find Cube root</button>
                <p id = "rootResult"></p>
              </details>
            </li>
          </ul>
          <hr>
+         <ul class="interest">
+           <li>
+             <details>
+               <summary>
+                 Interest Calculator
+               </summary>
+               <p>Enter the Principal, Rate of Interest and Time (in months):-</p>
+               <input class = "num" type="number" id="principal" placeholder="Enter Principal"></input><br>
+               <input class = "num" type="number" id="rateOfI" placeholder="Enter Rate of Interest"></input><br>
+               <input class = "num" type="number" id="time" placeholder="Enter Time Period"></input><br><br>
+               <strong>Simple Interest</strong><br><br>
+               <button onclick="SimpleInterest()">Use Simple Interest</button><br>
+               <p id = "SResult"></p>
+               <strong>Compound Interest</strong>
+               <p>Select how the amount is compounded:-</p>
+               <button id="year">Annually</button>
+               <button id="half">Half-Yearly</button>
+               <button id="quart">Quarterly</button><br><br>
+               <button id ="CI" onclick="CompoundInterest()">Use Compund Interest</button>           
+               <p id = "CResult"></p>
+             </details>
+           </li>
+         </ul>
+         <!--
+         <hr>
+         <ul class = "area">
+           <li>
+           <details>
+             <summary>Area</summary>
+             <p>Select one of the following shapes:- </p>
+             <details>
+               <summary><img src = "images/mul.png"></summary>
+               <input type="number" id="time" placeholder="Enter number"></input><br><br>
+             </details>
+            </details>
+           </li>
+         </ul>-->
          <br>
          <!--Mood Lighting-->
          <footer>
           <label for="colorPicker">Select a color</label>
-          <input type="color" id="colorPicker" name="favcolor" value="#00FFEE">
+          <input type="color" id="colorPicker" name="favcolor" value="#00FFEE" class="color">
           <button onclick="ChangeColor()">Change Mood</button>    
          </footer>                   
 </body> 
