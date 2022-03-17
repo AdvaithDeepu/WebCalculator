@@ -69,7 +69,7 @@ details > summary {
   cursor: pointer;
 }
 
-div.header {
+div.heading {
   display: flex;   
   justify-content: center;
   background-color: yellow;
