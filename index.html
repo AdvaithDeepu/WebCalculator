@@ -3,18 +3,22 @@
     <title>Web Calculator</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta name="google-site-verification" content="hPIYOb02FYe_KMoBEYCbJFH-rFjBKuDhqPCGB0qV5eU" />
     <meta charset="utf-8">
     <meta name="description" content="Calculate anything!">
     <meta name="keywords" content="Addition, Subtraction, Multiplication, Division, HCF, LCM, Exponent, Square root, Cube root, Multipication table, square table, Area, Perimeter">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <script src ="script.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
 </head>
 <body>
+  <div class = "container">
         <header>
-         <a href="https://advaithdeepu.github.io/WebCalculator/"><img src ="images/webcalc logo.png"></a>
-        </header>
+         <div class = "heading"><a href="https://advaithdeepu.github.io/WebCalculator/"><img src ="images/webcalc logo.png"></a></div>
+        </header><br>
         <!--Javascript code-->   
-        <script src ="script.js"></script>
         <ul class = "add">
          <li>
           <details>
@@ -156,9 +160,10 @@
          <br>
          <!--Mood Lighting-->
          <footer>
-          <label for="colorPicker">Select a color</label>
-          <input type="color" id="colorPicker" name="favcolor" value="#00FFEE" class="color">
-          <button onclick="ChangeColor()">Change Mood</button>    
-         </footer>                   
+           <div class = "footer"><span><label for="colorPicker">Select a color:  </label>
+            <input type="color" id="colorPicker" name="favcolor" value="#00FFEE" class="color"> 
+            <button onclick="ChangeColor()">Change Mood</button></span></div>             
+         </footer>    
+  </div>               
 </body> 
 </html>

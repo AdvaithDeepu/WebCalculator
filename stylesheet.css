@@ -1,67 +1,83 @@
 hr {
-    border-top: 1px solid black; 
-  }
+  border-top: 1px solid black; 
+}
 ul.add {
-    list-style-image: url("images/pls.png");
-  }
+  list-style-image: url("images/pls.png");
+}
 ul.sub {
-    list-style-image: url("images/sub.png");
-  }
+  list-style-image: url("images/sub.png");
+}
 ul.mul {
-    list-style-image: url("images/mul.png");
-  }
+  list-style-image: url("images/mul.png");
+}
 ul.div {
-    list-style-image: url("images/div.png");
-  }
+  list-style-image: url("images/div.png");
+}
 ul.exp {
-    list-style-image: url("images/sqr.png");
-  }
+  list-style-image: url("images/sqr.png");
+}
 ul.root {
-    list-style-image: url("images/root.png");
-  }
+  list-style-image: url("images/root.png");
+}
 ul.hcfLcm {
-    list-style-image: url("images/hcflcm.png");
+  list-style-image: url("images/hcflcm.png");
 }
 ul.interest{
-    list-style-image: url("images/interest.png");
+  list-style-image: url("images/interest.png");
 }
 button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: lightgreen; 
-    color: black; 
-    border: 2px solid #4CAF50;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: lightgreen; 
+  color: black; 
+  border: 2px solid #4CAF50;
 }
 button:hover:enabled {
-background-color: #4CAF50;
-color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 input.num{
-    background-color:#faf8a5;
-    padding: 8px 16px;
+  background-color:#faf8a5;
+  padding: 8px 16px;
 }
 
 input.color{
-    background-color: white;
+  background-color: white;
+}
+
+details{
+  background-color: yellow;
 }
 
 details > summary {
-    padding: 2px 6px;
-    width: 15em;
-    background-color:yellow;
-    border: none;
-    cursor: pointer;
-  }
+  padding: 2px 6px;
+  width: 15em;
+  border: none;
+  cursor: pointer;
+}
+
+div.header {
+  display: flex;   
+  justify-content: center;
+  background-color: yellow;
+  border-radius: 15px 15px 15px 15px;
+}
+div.footer {
+  display: flex;   
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
