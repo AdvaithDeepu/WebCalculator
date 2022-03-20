@@ -2,7 +2,7 @@
 <head>
     <title>Web Calculator</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta name="google-site-verification" content="hPIYOb02FYe_KMoBEYCbJFH-rFjBKuDhqPCGB0qV5eU" />
     <meta charset="utf-8">
@@ -24,9 +24,9 @@
           <details>
             <summary>Addition</summary>
             <p>Enter the two Numbers</p>
-            <input class = "num" type= "number" id = "addNum1" placeholder="Enter the Number"></input>
+            <input type= "number" id = "addNum1" placeholder="Enter the Number"></input>
             <br>
-            <input class = "num" type= "number" id = "addNum2" placeholder="Enter the Number"></input>
+            <input type= "number" id = "addNum2" placeholder="Enter the Number"></input>
             <br><button class = "button" onclick = "addition()">Calculate</button><br><br>
             <b id = "addResult" style = "color:black;"></b>            
           </details>
@@ -38,9 +38,9 @@
           <details>            
             <summary>Subtraction</summary>
             <p>Enter the two Numbers</p>
-            <input class = "num" type= "number" id = "subNum1" placeholder="Enter the Number"></input>
+            <input type= "number" id = "subNum1" placeholder="Enter the Number"></input>
             <br>
-            <input class = "num" type= "number" id = "subNum2" placeholder="Enter the Number"></input>
+            <input type= "number" id = "subNum2" placeholder="Enter the Number"></input>
             <br><button onclick = "subtraction()">Calculate</button><br><br>
             <b id = "subResult" style = "color:black;"></b>            
           </details>
@@ -66,9 +66,9 @@
           <details>
             <summary>Division</summary>
             <p>Enter the two Numbers</p>
-            <input class = "num" type= "number" id = "divNum1" placeholder="Enter the Number"></input>
+            <input type= "number" id = "divNum1" placeholder="Enter the Number"></input>
             <br>
-            <input class = "num" type= "number" id = "divNum2" placeholder="Enter the Number"></input>
+            <input type= "number" id = "divNum2" placeholder="Enter the Number"></input>
             <br><button onclick = "Division()">Calculate</button><br><br>
             <b id = "divResult" style = "color:black;"></b>
           </details>
@@ -82,8 +82,8 @@
                 HCF and LCM
               </summary>
               <p>Enter the Numbers</p>
-              <input class = "num" type="number" id="HCF1" placeholder="Enter the larger Number"></input><br>
-              <input class = "num" type="number" id="HCF2" placeholder="Enter  smaller Number"></input><br><br>
+              <input type="number" id="HCF1" placeholder="Enter the larger Number"></input><br>
+              <input type="number" id="HCF2" placeholder="Enter  smaller Number"></input><br><br>
               <button onclick="HCF()">Find HCF</button>
               <button onclick="LCM()">Find LCM</button>
               <p id = "Hresult"></p>
@@ -96,9 +96,9 @@
            <details>
            <summary>Exponentiation</summary>
            <p>Enter the number:- </p>
-           <input class = "num" type="number" id="Exp1" placeholder="Enter the Number"></input>
+           <input type="number" id="Exp1" placeholder="Enter the Number"></input>
            <p>Enter the exponent:- </p>
-           <input class = "num" type="number" id="Exp2" placeholder="Enter the Exponent"></input>
+           <input type="number" id="Exp2" placeholder="Enter the Exponent"></input>
            <br><button onclick = "Exponent()">Calculate</button>
            <p id = "ExpResult"></p>
            </details>
@@ -112,7 +112,7 @@
                  Square and Cube root
                </summary>
                <p>Enter the Number</p>
-               <input class = "num" type="number" id="rootNum" placeholder="Enter the Number"></input>
+               <input type="number" id="rootNum" placeholder="Enter the Number"></input>
                <br><button onclick="SquareRoot()">Find Square root</button>
                <button onclick="CubeRoot()">Find Cube root</button>
                <p id = "rootResult"></p>
@@ -127,9 +127,9 @@
                  Interest Calculator
                </summary>
                <p>Enter the Principal, Rate of Interest and Time (in months):-</p>
-               <input class = "num" type="number" id="principal" placeholder="Enter Principal"></input><br>
-               <input class = "num" type="number" id="rateOfI" placeholder="Enter Rate of Interest"></input><br>
-               <input class = "num" type="number" id="time" placeholder="Enter Time Period"></input><br><br>
+               <input type="number" id="principal" placeholder="Enter Principal"></input><br>
+               <input type="number" id="rateOfI" placeholder="Enter Rate of Interest"></input><br>
+               <input type="number" id="time" placeholder="Enter Time Period"></input><br><br>
                <strong>Simple Interest</strong><br><br>
                <button onclick="SimpleInterest()">Use Simple Interest</button><br>
                <p id = "SResult"></p>
@@ -143,7 +143,6 @@
              </details>
            </li>
          </ul>
-         <!--
          <hr>
          <ul class = "area">
            <li>
@@ -151,18 +150,216 @@
              <summary>Area</summary>
              <p>Select one of the following shapes:- </p>
              <details>
-               <summary><img src = "images/mul.png"></summary>
-               <input type="number" id="time" placeholder="Enter number"></input><br><br>
-             </details>
+              <summary><img src = "images/triangle.png">Triangle</summary>
+              <ul><li><details>
+                <summary>Heron's Formula (using 3 sides)</summary>
+                <input type="number" id="side1" placeholder="Measure of side 1"></input><br><br>
+                <input type="number" id="side2" placeholder="Measure of side 2"></input><br><br>
+                <input type="number" id="side3" placeholder="Measure of side 3"></input><br><br>
+                <button onclick="AreaTriHeron()">Find Area</button>
+                <p id = "triHeronArea"></p>
+               </details></li>
+               <li><details><summary>1/2 x base x height</summary>
+                <p>Enter the values of base and height:- </p>
+                <input type="number" id="triBase" placeholder="Value of base"></input><br><br>
+                <input type="number" id="triHeight" placeholder="Value of height"></input><br><br>
+                <button onclick="AreaTriBase()">Find area</button>
+                <p id = "triBaseArea"></p></details></li>
+              </ul></details>
+             <details>
+              <summary><img src = "images/square.png">Quadrilateral</summary>
+              <p>Select a Quadrilateral </p>
+              <ul><li><details><summary><img src = "images/para.png">Parallellogram</summary>
+                <p>Enter the values of base and height:- </p>
+                <input type="number" id="pBase" placeholder="Value of base"></input><br><br>
+                <input type="number" id="pHeight" placeholder="Value of height"></input><br><br>
+                <button onclick="AreaParallelogram()">Find area</button>
+                <p id = "paraArea"></p></details>
+                </li>
+              <li>
+              <details><summary><img src = "images/rect.png">Rectangle</summary>
+                <p>Enter the values of length and breadth:- </p>
+                <input type="number" id="rLength" placeholder="Value of length"></input><br><br>
+                <input type="number" id="rBreadth" placeholder="Value of breadth"></input><br><br>
+                <button onclick="AreaRectangle()">Find area</button>
+                <p id = "rArea"></p></details> 
+              </li>
+              <li><details><summary><img src = "images/square.png">Square</summary>
+                <p>Enter the value of side of the square:- </p>
+                <input type="number" id="sSide" placeholder="Value of side"></input><br><br>
+                <button onclick="AreaSquare()">Find area</button>
+                <p id = "sArea"></p></details> </li></ul></details>
+              <details><summary><img src = "images/circle.png">Circle</summary>
+                <p>Enter the value of radius of the circle:- </p>
+                <input type="number" id="aRadius" placeholder="Value of radius"></input><br><br>
+                <button onclick="AreaCircle()">Find Area</button>
+                <p id = "cArea"></p>
+              </details>
+            </li>
+            </ul>
+          <hr>
+         <ul class = "perimeter">
+          <li>
+          <details>
+            <summary>Perimeter</summary>
+            <p>Select one of the following shapes:- </p>
+            <details>
+             <summary><img src = "images/triangle.png">Triangle</summary>
+             <p>Enter the values of each side of the Triangle</p>
+             <input type="number" id="pSide1" placeholder="Measure of side 1"></input><br><br>
+            <input type="number" id="pSide2" placeholder="Measure of side 2"></input><br><br>
+            <input type="number" id="pSide3" placeholder="Measure of side 3"></input><br><br>
+            <button onclick="PeriTriangle()">Find Perimeter</button>
+            <p id = "pTriangle"></p>
             </details>
-           </li>
-         </ul>-->
+            <details>
+             <summary><img src = "images/square.png">Quadrilaterals</summary>
+             <p>Select a Quadrilateral </p>
+             <ul><li>
+              <details><summary><img src = "images/rect.png">Rectangle/Parallelogram</summary>
+                <p>Enter the values of length and breadth:- </p>
+                <input type="number" id="pLength" placeholder="Value of length"></input><br><br>
+                <input type="number" id="pBreadth" placeholder="Value of breadth"></input><br><br>
+                <button onclick="PeriRectangle()">Find Perimeter</button>
+                <p id = "pRect"></p></details> 
+              </li>
+              <li>
+              <details><summary><img src = "images/square.png">Square</summary>
+                <p>Enter the value of side of the square or Rhombus:- </p>
+                <input type="number" id="pSide" placeholder="Value of side"></input><br><br>
+                <button onclick="PeriSquare()">Find Perimeter</button>
+                <p id = "pSquare"></p>
+              </details>
+              </li>
+              </ul>
+           </details>
+           <details>
+             <summary><img src = "images/circle.png">Circle</summary>
+             <p>Enter the value of radius of the circle:- </p>
+              <input type="number" id="pRadius" placeholder="Value of radius"></input><br><br>
+              <button onclick="CircumCircle()">Find Perimeter</button>
+              <p id = "CircumCircle"></p> 
+           </details>
+           <details>
+            <summary><img src = "images/regular.png">Any Regular polygon</summary>
+            <p>Enter the length of each side and the total number of sides:- </p>
+            <input type="number" id="pReguLength" placeholder="Length of each side"></input><br><br>
+            <input type="number" id="pReguNum" placeholder="Number of Sides" min="3"></input><br><br>
+            <button onclick="PeriRegular()">Find Perimeter</button>
+            <p id = "pRegular"></p></details> 
+          </details>
+          </details>
+          </li>
+        </ul>
+        <hr>
+         <ul class = "surfacearea">
+          <li>
+          <details>
+            <summary>Surface Area</summary>
+            <p>Select one of the following shapes:- </p>
+            <details>
+             <summary><img src = "images/cuboid.png">Cuboid</summary>
+             <input type="number" id="sLength" placeholder="Value of Length"></input><br><br>
+             <input type="number" id="sBreadth" placeholder="Value of Breadth"></input><br><br>
+             <input type="number" id="sHeight" placeholder="Value of Height"></input><br><br>
+             <button onclick = "TSACuboid()">Find Total Surface Area</button>
+             <button onclick = "CSACuboid()">Find Curved Surface Area</button>
+             <p id = "sCuboid"></p>
+            </details>
+            <details>
+             <summary><img src = "images/cube.png">Cube</summary>
+             <input type="number" id="surfaceSide" placeholder="Value of Side"></input><br><br>
+             <button onclick = "TSACube()">Find Total Surface Area</button>
+             <button onclick = "CSACube()">Find Curved Surface Area</button>
+             <p id = "sCube"></p>
+           </details>
+           <details>
+             <summary><img src = "images/cylinder.png">Cylinder</summary>
+             <input type="number" id="sCylRadius" placeholder="Enter Radius"></input><br><br>
+             <input type="number" id="sCylHeight" placeholder="Enter Height"></input><br><br>
+             <button onclick = "TSACylinder()">Find Total Surface Area</button>
+             <button onclick = "CSACylinder()">Find Curved Surface Area</button>
+             <p id="sCylinder"></p>
+           </details>
+           <details>
+            <summary><img src = "images/cone.png">Cone</summary>
+            <input type="number" id="sConeRadius" placeholder="Enter Radius"></input><br><br>
+            <input type="number" id="sConeHeight" placeholder="Enter Height"></input><br><br>
+            <button onclick = "TSACone()">Find Total Surface Area</button>
+            <button onclick = "CSACone()">Find Curved Surface Area</button>
+            <p id = "sCone"></p>
+          </details>
+          <details>
+            <summary><img src = "images/sphere.png">Sphere</summary>
+            <input type="number" id="sSphRadius" placeholder="Enter Radius"></input><br><br>
+            <button onclick="TSASphere()">Find Total Surface Area</button>
+            <p id ="sSphere"></p>
+          </details>
+          <details>
+            <summary><img src = "images/hemi.png">Hemi-Sphere</summary>
+            <input type="number" id="sHemiRadius" placeholder="Enter Radius"></input><br><br>
+            <button onclick="TSAHemi()">Find Total Surface Area</button>
+            <button onclick = "CSAHemi()">Find Curved Surface Area</button>
+            <p id ="sHemi"></p>
+          </details>
+          </details>
+          </li>
+        </ul>
+        <hr>
+        <ul class = "volume">
+          <li>
+          <details>
+            <summary>Volume</summary>
+            <p>Select one of the following shapes:- </p>
+            <details>
+             <summary><img src = "images/cuboid.png">Cuboid</summary>
+             <input type="number" id="vLength" placeholder="Value of Length"></input><br><br>
+             <input type="number" id="vBreadth" placeholder="Value of Breadth"></input><br><br>
+             <input type="number" id="vHeight" placeholder="Value of Height"></input><br><br>
+             <button onclick = "VolCuboid()">Find Volume</button>
+             <p id = "vCuboid"></p>
+            </details>
+            <details>
+             <summary><img src = "images/cube.png">Cube</summary>
+             <input type="number" id="vSide" placeholder="Value of Side"></input><br><br>
+             <button onclick = "VolCube()">Find Volume</button>
+             <p id = "vCube"></p>
+           </details>
+           <details>
+             <summary><img src = "images/cylinder.png">Cylinder</summary>
+             <input type="number" id="vCylRadius" placeholder="Enter Radius"></input><br><br>
+             <input type="number" id="vCylHeight" placeholder="Enter Height"></input><br><br>
+             <button onclick = "VolCylinder()">Find Volume</button>
+             <p id="vCylinder"></p>
+           </details>
+           <details>
+            <summary><img src = "images/cone.png">Cone</summary>
+            <input type="number" id="vConeRadius" placeholder="Enter Radius"></input><br><br>
+            <input type="number" id="vConeHeight" placeholder="Enter Height"></input><br><br>
+            <button onclick = "VolCone()">Find Volume</button>
+            <p id = "vCone"></p>
+          </details>
+          <details>
+            <summary><img src = "images/sphere.png">Sphere</summary>
+            <input type="number" id="vSphRadius" placeholder="Enter Radius"></input><br><br>
+            <button onclick="VolSphere()">Find Volume</button>
+            <p id ="vSphere"></p>
+          </details>
+          <details>
+            <summary><img src = "images/hemi.png">Hemi-Sphere</summary>
+            <input type="number" id="vHemiRadius" placeholder="Enter Radius"></input><br><br>
+            <button onclick="VolHemi()">Find Volume</button>
+            <p id ="vHemi"></p>
+          </details>
+          </details>
+          </li>
+        </ul>
          <br>
          <!--Mood Lighting-->
          <footer>
           <div class="footer">
             <span><label for="colorPicker">Select a color: </label>
-            <input type="color" id="colorPicker" name="favcolor" value="#00FFEE" class="color"> 
+            <input type="color" id="colorPicker" name="favcolor" value="#00FFEE" class="input color"> 
             <button onclick="ChangeColor()">Change Mood</button></span>  
           </div>                
          </footer>    

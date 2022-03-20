@@ -1,6 +1,9 @@
 hr {
   border-top: 1px solid black; 
 }
+ul{
+  list-style-image: url("images/limg.png");
+}
 ul.add {
   list-style-image: url("images/pls.png");
 }
@@ -24,6 +27,20 @@ ul.hcfLcm {
 }
 ul.interest{
   list-style-image: url("images/interest.png");
+}
+
+ul.area{
+  list-style-image: url("images/area.png");
+  background-color: none;
+}
+ul.perimeter{
+  list-style-image: url("images/perimeter.png");
+}
+ul.surfacearea{
+  list-style-image: url("images/surface.png");
+}
+ul.volume{
+  list-style-image:url("images/cuboid.png");
 }
 button {
   background-color: #4CAF50; /* Green */
@@ -49,13 +66,14 @@ button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-input.num{
+input{
   background-color:#faf8a5;
   padding: 8px 16px;
 }
 
-input.color{
+.color{
   background-color: white;
+  padding: unset;
 }
 
 details{
