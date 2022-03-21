@@ -1,7 +1,14 @@
 let num1, num2,x,y,z;
-window.onload = function () {
+window.onload = function() {
+    var mybutton = document.getElementById("topBtn");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+    };
     document.getElementById("CI").disabled = true;
-    document.body.style.backgroundColor = "#00FFEE" //initialize background color
     document.getElementById("year").addEventListener("click", function() {
        x = 1; 
        document.getElementById("CI").disabled = false;
@@ -15,7 +22,10 @@ window.onload = function () {
        document.getElementById("CI").disabled = false;
     });
 }
-
+function topFunction(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 function addition(){
     num1 = parseInt(document.getElementById("addNum1").value);
     num2 = parseInt(document.getElementById("addNum2").value);
@@ -43,11 +53,11 @@ function Division(){
 }
 function SquareRoot(){
     num1 = document.getElementById("rootNum").value;
-    document.getElementById("rootResult").innerHTML = "Square root of "+num1+" is "+Math.sqrt(num1);
+    document.getElementById("rootResult").innerHTML = "Square root of "+num1+" is "+Math.sqrt(num1).toFixed(2);
 }
 function CubeRoot(){
     num1 = document.getElementById("rootNum").value;
-    document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1)
+    document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1).toFixed(2);
 }
 function Lemma(x,y){
     while (1==1){        
