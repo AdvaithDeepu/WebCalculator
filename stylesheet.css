@@ -173,7 +173,7 @@ a:hover {
   background: rgba(255, 255, 255, .5);
   padding: 1%;
   overflow: hidden;
-  height: 55px;
+  height: 80px;
   margin: 0 auto;
   display:block;
 }
@@ -189,10 +189,22 @@ a:hover {
 }
 #header ul li {
   float: left;
+  min-height: 2px;
   margin-left: 10px;
   font-size: 20px;
 }
 
+@media only screen and (max-width: 700px) {
+   #header ul {
+     float: none;
+     padding-left: unset;
+     margin-top: unset;
+   }
+   #header ul li {
+    float: none;
+    width: 100%;
+  }
+}
 .fullscreen {
   position: relative;
   margin: 0 auto;
