@@ -172,7 +172,7 @@ a:hover {
 #header {
   background: rgba(255, 255, 255, .5);
   padding: 1%;
-  overflow: hidden;
+  overflow:visible;
   height: 80px;
   margin: 0 auto;
   display:block;
@@ -194,7 +194,7 @@ a:hover {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 700px) {
+@media all and (max-width: 800px) {
    #header ul {
      float: none;
      padding-left: unset;
@@ -203,6 +203,25 @@ a:hover {
    #header ul li {
     float: none;
     width: 100%;
+  }
+   #header img {
+    float: left;
+    box-shadow: none;
+    height: auto;
+    width: 65%;
+    padding-bottom: 50px;
+   }
+   a.head:link, a.head:visited{
+    background-color:aliceblue;
+    color: black;
+    padding: 3px 8px;
+    text-align: center;
+    text-decoration: none;
+    display:inline-flexbox;
+    border: 1px solid black;
+  }
+  a.head:hover, a.head:active {
+    background-color: rgb(245, 245, 157);
   }
 }
 .fullscreen {
