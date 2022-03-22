@@ -223,6 +223,10 @@ a:hover {
   a.head:hover, a.head:active {
     background-color: rgb(245, 245, 157);
   }
+  #topBtn{
+    height: auto;
+    width: 20%;
+  }
 }
 .fullscreen {
   position: relative;
