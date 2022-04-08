@@ -60,16 +60,21 @@ function CubeRoot(){
     document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1).toFixed(2);
 }
 function Lemma(x,y){
-    while (1==1){        
-        z = x%y;
-        if (z!=0){
-            x = y;
-            y = z;
-        }else if (z==0){ 
-            break;
+    if (x>y){
+        while (1==1){        
+            z = x%y;
+            if (z!=0){
+                x = y;
+                y = z;
+            }else if (z==0){ 
+                break;
+            }
         }
+        return y;
+    }else{
+        alert("Please input the larger number in the first box")
+        return "NaN";
     }
-    return y;
 }
 function HCF(){
     num1 = document.getElementById("HCF1").value;
@@ -238,4 +243,45 @@ function TSAHemi(){
 function CSAHemi(){
     num1 = parseInt(document.getElementById("sHemiRadius").value);
     document.getElementById("sHemi").innerHTML = "The Curved Surface area of the Hemisphere is: "+(2*Math.PI*num1**2).toFixed(2);
+}
+function Factor(){
+    y = [];
+    num1 = document.getElementById("factor").value;
+    for (x=1; x<(num1+1); x++){
+        if (num1%x==0){
+            y.push(x);
+        }
+    document.getElementById("fresult").innerHTML= "The factors of "+num1+" are: "+y;
+
+    }
+}
+function MTable(){
+    num1 = document.getElementById("mtable1").value;
+    num2 = parseInt(document.getElementById("mtable2").value)+1;
+    x = [];
+    for (y=1; y<num2 ;y++){
+        x.push(num1+" x "+y+" = "+(num1*y))
+    }
+    z = "<ul>";
+    for (y = 0; y < x.length; y++) {
+    z += "<li>" + x[y] + "</li>";
+    }
+    z += "</ul>";
+    document.getElementById("scroll").scrollIntoView()
+    document.getElementById("mTableResult").innerHTML = z;
+}
+function STable(){
+    y = document.getElementById("stable1").value;
+    num2 = parseInt(document.getElementById("stable2").value)+1;
+    x = [];
+    for (y=1; y<num2 ;y++){
+        x.push(y+" x "+y+" = "+(y**2))
+    }
+    z = "<ul>";
+    for (y = 0; y < x.length; y++) {
+    z += "<li>" + x[y] + "</li>";
+    }
+    z += "</ul>";
+    document.getElementById("scroll2").scrollIntoView()
+    document.getElementById("sTableResult").innerHTML = z;
 }

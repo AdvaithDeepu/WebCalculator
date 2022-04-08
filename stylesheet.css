@@ -47,6 +47,12 @@ ul.surfacearea{
 ul.volume{
   list-style-image:url("images/cuboid.png");
 }
+ul.factor{
+  list-style-image: url("images/factor.png");
+}
+ul.mtable{
+  list-style-image: url("images/mtable.png");
+}
 button {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -146,7 +152,7 @@ html, body {
 }
 
 html {
-  background: url("images/background.png") fixed;
+  background: url("images/background.jpg") fixed;
   background-size: 100%;
 }
 
@@ -246,6 +252,9 @@ a:hover {
 .white {
   background: #eeeeec;
   padding: 0 5%;
+}
+.mult{
+  background: #26a1ff;
 }
 .nobg {
   background: none;

@@ -15,10 +15,10 @@
         <button onclick="topFunction()" id="topBtn" title="Go to top"><img src = "images/up.png"></button>
         <div class="fullscreen nopadding">
          <div id="header">
-            <a href="https://advaithdeepu.github.io/WebCalculator/"><img src ="images/webcalc logo.png"></a>
+            <a href="https://advaithdeepu.github.io/WebCalculator/" title="https://advaithdeepu.github.io/WebCalculator/"><img src ="images/webcalc logo.png"></a>
             <ul>
             <li><a class = "head" href = "about.html">About Page</a></li><!--add hover text(title tag)-->
-            <li><a class = "head" href = "mailto:calculator.advaith@gmail.com">Contact Me</a></li>
+            <li><a class = "head" href = "mailto:calculator.advaith@gmail.com" title="calculator.advaith@gmail.com">Contact Me</a></li>
             </ul>
          </div>
         </div>
@@ -111,6 +111,20 @@
                 </li>
               </ul>         
               <hr>
+              <ul class = "factor">
+                <li>
+                  <details>
+                    <summary>
+                      Factors
+                    </summary>
+                    <p>Find the factors of the Number</p>
+                    <input type="number" id="factor" placeholder="Enter the Number"></input><br>
+                    <button onclick="Factor()">Find Factors</button>
+                    <p id = "fresult"></p>
+                  </details>
+                </li>
+              </ul>         
+              <hr>
               <ul class = "exp">
                 <li>
                  <details>
@@ -121,6 +135,20 @@
                  <input type="number" id="Exp2" placeholder="Enter the Exponent"></input>
                  <br><button onclick = "Exponent()">Calculate</button>
                  <p id = "ExpResult"></p>
+                 </details>
+                </li>
+               </ul>
+               <hr>
+               <ul class = "exp">
+                <li>
+                 <details>
+                 <summary>Square Table</summary>
+                 <p>Enter the number from where you want to start the square table:- </p>
+                 <input type="number" id="stable1" placeholder="Enter the Number"></input>
+                 <p>Enter the number from where you want to end the square table:- </p>
+                 <input type="number" id="stable2" placeholder="Enter the Number"></input>
+                 <br><button onclick = "STable()" id ="scroll2">Calculate</button>
+                 <p style ="background: aqua;" id = "sTableResult"></p>
                  </details>
                 </li>
                </ul>
@@ -139,6 +167,35 @@
                    </details>
                  </li>
                </ul>
+               <hr>
+               <ul class = "mul">
+                <li>
+                 <details>
+                 <summary>Multipication Table</summary>
+                 <p>Enter the number whose multiplication table is required:- </p>
+                 <input type="number" id="mtable1" placeholder="Enter the Number"></input>
+                 <p>Enter number till where you want the multiplication table: </p>
+                 <input type="number" id="mtable2" value="10" placeholder="Enter the Number"></input>
+                 <br><button onclick = "MTable()" id ="scroll">Calculate</button>
+                 <p style ="background: aqua;" id = "mTableResult"></p>
+                 </details>
+                </li>
+               </ul>
+               <hr>
+               <!--<ul class = "zeroes">
+                <li>
+                  <details>
+                    <summary>
+                      Roots of a polynomial
+                    </summary>
+                    <p>Find the factors of the Number</p>
+                    <input type="number" id="factor" placeholder="Enter the Number"></input><br>
+                    <button onclick="Factor()">Find Factors</button>
+                    <p id = "fresult"></p>
+                  </details>
+                </li>
+              </ul>         
+              <hr>-->
         </div>
         <hr id = "Interest">
         <div class = "white">
