@@ -60,22 +60,12 @@ function CubeRoot(){
     document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1).toFixed(2);
 }
 function Lemma(x,y){
-    if (x>y){
-        while (1==1){        
-            z = x%y;
-            if (z!=0){
-                x = y;
-                y = z;
-            }else if (z==0){ 
-                break;
-            }
-        }
-        return y;
-    }else{
-        alert("Please input the larger number in the first box")
-        return "NaN";
-    }
-}
+    if (x<y){
+        [x,y]=[y,x];
+    }while (x%y !== 0){        
+            [x,y]=[y,x%y]
+            }return y;
+        }        
 function HCF(){
     num1 = document.getElementById("HCF1").value;
     num2 = document.getElementById("HCF2").value;
