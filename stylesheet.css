@@ -178,7 +178,7 @@ a:hover {
 #header {
   background: rgba(255, 255, 255, .5);
   padding: 1%;
-  overflow:visible;
+  overflow:visible; 
   height: 80px;
   margin: 0 auto;
   display:block;
