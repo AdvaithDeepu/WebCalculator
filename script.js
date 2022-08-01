@@ -264,7 +264,7 @@ function STable(){
     y = document.getElementById("stable1").value;
     num2 = parseInt(document.getElementById("stable2").value)+1;
     x = [];
-    for (y=1; y<num2 ;y++){
+    for (y; y<num2 ;y++){
         x.push(y+" x "+y+" = "+(y**2))
     }
     z = "<ul>";
