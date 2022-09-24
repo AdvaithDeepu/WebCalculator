@@ -26,38 +26,58 @@ function topFunction(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-function addition(){
-    num1 = parseInt(document.getElementById("addNum1").value);
-    num2 = parseInt(document.getElementById("addNum2").value);
-    document.getElementById("addResult").innerHTML = num1+" + "+num2+" = "+(num1+num2);
+//<Calculator>
+$(document).ready(function() {
+    $(".calc").click(function() {
+        var value = $(this).val();
+        document.getElementById("cl").innerHTML+=value;
+    });
+});
+function Evaluate(){
+    document.getElementById("cl").innerHTML = eval(document.getElementById("cl").innerHTML)
 }
-function subtraction(){
-    num1 = document.getElementById("subNum1").value;
-    num2= document.getElementById("subNum2").value;
-    document.getElementById("subResult").innerHTML = num1+" - "+num2+" = "+(num1-num2);
-}                
-function multiplication(){
-    num1 = document.getElementById("multNum1").value;
-    num2 = document.getElementById("multNum2").value;
-    document.getElementById("multResult").innerHTML = num1+" X "+num2+" = "+num1*num2;
+function Back(){
+    document.getElementById("cl").innerHTML = (document.getElementById("cl").innerHTML).slice(0, -1);
 }
+//</Calculator>
 function Exponent(){
     num1 = document.getElementById("Exp1").value;
     num2 = document.getElementById("Exp2").value;
     document.getElementById("ExpResult").innerHTML=num1+" raised to "+ num2+" is: "+num1**num2;
 }
-function Division(){
-    num1 = document.getElementById("divNum1").value;
-    num2 = document.getElementById("divNum2").value;
-    document.getElementById("divResult").innerHTML = num1+" ÷ "+num2+" = "+num1/num2;
-}
 function SquareRoot(){
-    num1 = document.getElementById("rootNum").value;
-    document.getElementById("rootResult").innerHTML = "Square root of "+num1+" is "+Math.sqrt(num1).toFixed(2);
+    num1 = document.getElementById("fInput").value;
+    document.getElementById("fResult").innerHTML = "Square root of "+num1+" is "+Math.sqrt(num1).toFixed(2);
 }
 function CubeRoot(){
-    num1 = document.getElementById("rootNum").value;
-    document.getElementById("rootResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1).toFixed(2);
+    num1 = document.getElementById("fInput").value;
+    document.getElementById("fResult").innerHTML = "Cube root of "+num1+" is "+Math.cbrt(num1).toFixed(2);
+}
+function Factor(){
+    y = [];
+    num1 = document.getElementById("fInput").value;
+    for (x=1; x<(num1+1); x++){
+        if (num1%x==0){
+            y.push(x);
+        }
+    }
+    document.getElementById("fResult").innerHTML= "The factors of "+num1+" are: "+y;
+}
+function Prime(){
+    num1=document.getElementById("fInput").value;
+    let x = 2
+    if (num1!= 0 && num1!=1){
+       while (num1%x!=0){
+         x+=1
+       }
+        if (num1%x ==0 && x<(Math.sqrt(num1))+1 &&num1!= 2){
+            document.getElementById("fResult").innerHTML= num1+" is a Composite number"
+        }else{
+            document.getElementById("fResult").innerHTML= num1+" is a Prime number"
+        }
+    }else{
+        document.getElementById("fResult").innerHTML= num1+" is neither Prime nor Composite"
+    }
 }
 function Lemma(x,y){
     if (x<y){
@@ -76,7 +96,7 @@ function LCM(){
     num2 = document.getElementById("HCF2").value;
     document.getElementById("Hresult").innerHTML= "The LCM of "+num1+" and "+num2+" is: "+((num1*num2)/Lemma(num1, num2));;
 }
-function ChangeColor(){ //Mood lighting code 
+function ChangeColor(){ //*legacy* Mood lighting code 
     document.body.style.backgroundColor = document.getElementById("colorPicker").value;
 }
 function SimpleInterest(){
@@ -234,20 +254,9 @@ function CSAHemi(){
     num1 = parseInt(document.getElementById("sHemiRadius").value);
     document.getElementById("sHemi").innerHTML = "The Curved Surface area of the Hemisphere is: "+(2*Math.PI*num1**2).toFixed(2);
 }
-function Factor(){
-    y = [];
-    num1 = document.getElementById("factor").value;
-    for (x=1; x<(num1+1); x++){
-        if (num1%x==0){
-            y.push(x);
-        }
-    document.getElementById("fresult").innerHTML= "The factors of "+num1+" are: "+y;
-
-    }
-}
 function MTable(){
-    num1 = document.getElementById("mtable1").value;
-    num2 = parseInt(document.getElementById("mtable2").value)+1;
+    num1 = document.getElementById("table1").value;
+    num2 = parseInt(document.getElementById("table2").value)+1;
     x = [];
     for (y=1; y<num2 ;y++){
         x.push(num1+" x "+y+" = "+(num1*y))
@@ -258,20 +267,33 @@ function MTable(){
     }
     z += "</ul>";
     document.getElementById("scroll").scrollIntoView()
-    document.getElementById("mTableResult").innerHTML = z;
+    document.getElementById("TableResult").innerHTML = z;
 }
 function STable(){
-    y = document.getElementById("stable1").value;
-    num2 = parseInt(document.getElementById("stable2").value)+1;
-    x = [];
-    for (y; y<num2 ;y++){
-        x.push(y+" x "+y+" = "+(y**2))
+    y = document.getElementById("table1").value;
+    num2 = parseInt(document.getElementById("table2").value)+1;
+    if (num2<y){
+        alert("The starting number cannot be higher than ending number.")
+    }else{
+        x = [];
+        for (y; y<num2 ;y++){
+            x.push(y+" x "+y+" = "+(y**2))
+        }
+        z = "<ul>";
+        for (y = 0; y < x.length; y++) {
+        z += "<li>" + x[y] + "</li>";
+        }
+        z += "</ul>";
+        document.getElementById("scroll").scrollIntoView()
+        document.getElementById("TableResult").innerHTML = z;
     }
-    z = "<ul>";
-    for (y = 0; y < x.length; y++) {
-    z += "<li>" + x[y] + "</li>";
-    }
-    z += "</ul>";
-    document.getElementById("scroll2").scrollIntoView()
-    document.getElementById("sTableResult").innerHTML = z;
 }
+
+
+
+
+
+
+
+
+
