@@ -34,7 +34,7 @@ $(document).ready(function() {
     });
 });
 function Evaluate(){
-    document.getElementById("cl").innerHTML = Function("return " + document.getElementById("cl").innerHTML)();;
+    //document.getElementById("cl").innerHTML = eval(document.getElementById("cl").innerHTML)
 }
 function Back(){
     document.getElementById("cl").innerHTML = (document.getElementById("cl").innerHTML).slice(0, -1);
