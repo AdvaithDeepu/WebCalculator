@@ -238,8 +238,8 @@ box-shadow: none;
   font-size: 20px;
 }
 
-@media all and ( max-width : 800px ) {
-  #cTable{
+@media only screen and ( max-width : 800px ) {
+  table{
     width:100%
   }
   #header ul {
