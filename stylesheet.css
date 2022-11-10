@@ -238,8 +238,13 @@ box-shadow: none;
   font-size: 20px;
 }
 #cl{
+<<<<<<< HEAD
   height: 50px;
   width: 50px;
+=======
+  height: 57px;
+  width: 38px;
+>>>>>>> dfe00db8b6084bf8a8c3b1aff71cbd2f46c0eff8
   text-align: right;
   background-color: #c3b9b9;
 }
