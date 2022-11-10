@@ -43,41 +43,43 @@
     </div>
     <div class="white">
       <h1>Calculator</h1>
-      <div style="overflow-x:auto;">
+      <div style="height: 300px;">
       <table id ="cTable" style="width: 500px; height: 250px;">
         <tbody>
           <tr>
-            <td colspan="4" id ="cl"></td>
+            <td colspan="5" id ="cl"></td>
           </tr>
           <tr>
             <td class="calctable"><button class="calc" value="9">9</button></td>
             <td class="calctable"><button class="calc" value="8">8</button></td>
             <td class="calctable"><button class="calc" value="7">7</button></td>
             <td class="calctable"><button class="calc" value="+">+</button></td>
+            <td class="calctable"><button class="calc" value="" onclick="Clear()">C</button></td>
           </tr>
           <tr>
             <td class="calctable"><button class="calc" value="6">6</button></td>
             <td class="calctable"><button class="calc" value="5">5</button></td>
             <td class="calctable"><button class="calc" value="4">4</button></td>
             <td class="calctable"><button class="calc" value="-">-</button></td>
+            <td class="calctable"></td>
           </tr>
           <tr>
             <td class="calctable"><button class="calc" value="3">3</button></td>
             <td class="calctable"><button class="calc" value="2">2</button></td>
             <td class="calctable"><button class="calc" value="1">1</button></td>
             <td class="calctable"><button class="calc" value="*">x</button></td>
+            <td class="calctable"></td>
           </tr>
           <tr>
             <td class="calctable"><button class="calc" value="" onclick="Back()">◁</button><br></td>
             <td class="calctable"><button class="calc" value="0">0</button></td>
             <td class="calctable"><button class="calc" onclick="Evaluate()">=</button></td>
             <td class="calctable"><button class="calc" value="/">÷</button></td>
+            <td class="calctable"></td>
           </tr>
         </tbody>
       </table>
     </div>
-      <br>
-      <br>
     </div>
     <hr id="MoreArithmetics">
     <div class="white">
@@ -498,6 +500,3 @@
     </div>
   </body>
 </html>
-
-
-

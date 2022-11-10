@@ -39,6 +39,10 @@ function Evaluate(){
 function Back(){
     document.getElementById("cl").innerHTML = (document.getElementById("cl").innerHTML).slice(0, -1);
 }
+
+function Clear(){
+    document.getElementById("cl").innerHTML = '';
+}
 //</Calculator>
 function Exponent(){
     num1 = document.getElementById("Exp1").value;
