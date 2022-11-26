@@ -145,6 +145,17 @@ input {
   padding: 8px 16px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+
 .color {
   background-color: white;
   padding: unset;
@@ -323,5 +334,13 @@ text-shadow: 0px 0px 4px black;
   background: #010105 none repeat scroll 0% 0%;
   padding: 0px 5%;
   text-align: center;
+}
+.mtsi{
+  width: 4ch;
+  max-width: 100%; 
+}
+
+.mts{
+  display: inline-flex;
 }
 
