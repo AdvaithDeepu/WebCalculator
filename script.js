@@ -292,12 +292,32 @@ function STable(){
         document.getElementById("TableResult").innerHTML = z;
     }
 }
+function Solution(){
+    roots = QFormula();
+    if (roots[0]== 'NaN'){
+        document.getElementById("split").innerHTML="No Real Roots"
 
-
-
-
-
-
-
-
-
+    }else{
+        document.getElementById("split").innerHTML= "The roots of equation are:- "+roots[0]+" and "+roots[1];
+    }
+}
+function QFormula(){
+    x = document.getElementById("xsq").value;
+    if (x==''){
+        x = 1;
+    }
+    y = document.getElementById("x").value;
+    z = document.getElementById("const").value;
+    num1 = (-(y)+Math.sqrt((y**2)-(4*x*z)))/2*x;
+    num2 = (-(y)-Math.sqrt((y**2)-(4*x*z)))/2*x; 
+    return [num1,num2];
+}
+function MTS(){
+    // roots = QFormula()
+    // num1 = document.getElementById("xsq").value;
+    // num2 = document.getElementById("x").value;
+    // x = document.getElementById("const").value;
+    // z =num1+""
+    // document.getElementById("split").innerHTML=z;
+    document.getElementById("split").innerHTML="Coming soon!"
+}

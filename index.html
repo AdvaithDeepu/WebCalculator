@@ -61,21 +61,21 @@
             <td class="calctable"><button class="calc" value="5">5</button></td>
             <td class="calctable"><button class="calc" value="4">4</button></td>
             <td class="calctable"><button class="calc" value="-">-</button></td>
-            <td class="calctable"></td>
+            <td class="calctable"><button class="calc" value="(">(</button></td>
           </tr>
           <tr>
             <td class="calctable"><button class="calc" value="3">3</button></td>
             <td class="calctable"><button class="calc" value="2">2</button></td>
             <td class="calctable"><button class="calc" value="1">1</button></td>
             <td class="calctable"><button class="calc" value="*">x</button></td>
-            <td class="calctable"></td>
+            <td class="calctable"><button class="calc" value=")">)</button></td>
           </tr>
           <tr>
-            <td class="calctable"><button class="calc" value="" onclick="Back()">◁</button><br></td>
+            <td class="calctable"><button class="calc" value="" onclick="Evaluate()">=</button><br></td>
             <td class="calctable"><button class="calc" value="0">0</button></td>
-            <td class="calctable"><button class="calc" onclick="Evaluate()">=</button></td>
+            <td class="calctable"><button class="calc" onclick="Back()">◁</button></td>
             <td class="calctable"><button class="calc" value="/">÷</button></td>
-            <td class="calctable"></td>
+            <td class="calctable"><button class="calc" value=".">.</button></td>
           </tr>
         </tbody>
       </table>
@@ -152,17 +152,23 @@
         <summary>Roots</summary><p class="soon">Coming soon!</p>
       </details><hr>
       <details>
-        <Summary>Solutions</Summary><p class="soon">Coming soon!</p>
-      </details><hr>
+        <Summary>Solutions</Summary>
+        <p class="soon">Coming soon!</p>
+        <div id="mts">
+          <input id="xsq" type="number" class ="mtsi"><label>x² +</label>
+          <input id="x" type="number" class ="mtsi"><label>x +</label>
+          <input id="const" type="number" class ="mtsi"><label> = 0</label>
+        </div>
+        <button onclick="Solution()">Find Solution</button><button onclick="MTS()">Split Middle Term</button>
+        <p id="split"></p>
+      </details>
+      <hr>
       <details>
-        <summary>Progressions</summary><p class="soon">Coming soon!</p>
-      </details><hr>
-      <details><summary>Middle Term Splitting</summary><p class="soon">Coming soon!</p></details><br>
-      <!--<ul class = "zeroes">
-                <li>                  <details>                    <summary>                      Roots of a polynomial
-                    </summary>                    <p>Find the factors of the Number</p>                    <input type="number" id="factor" placeholder="Enter the Number"></input><br>                    <button onclick="Factor()">Find Factors</button>
-                    <p id = "fresult"></p>                  </details>                </li>              </ul>         
-              <hr>--></div>
+        <summary>Progressions</summary>
+        <p class="soon">Coming soon!</p>
+      </details>
+      <br>
+    </div>
     <hr id="Interest">
     <div class="white">
       <h1>Interest</h1>
