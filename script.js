@@ -308,8 +308,8 @@ function QFormula(){
     }
     y = document.getElementById("x").value;
     z = document.getElementById("const").value;
-    num1 = (-(y)+Math.sqrt((y**2)-(4*x*z)))/2*x;
-    num2 = (-(y)-Math.sqrt((y**2)-(4*x*z)))/2*x; 
+    num1 = (-(y)+Math.sqrt((y**2)-(4*x*z)))/(2*x);
+    num2 = (-(y)-Math.sqrt((y**2)-(4*x*z)))/(2*x); 
     return [num1,num2];
 }
 function MTS(){
